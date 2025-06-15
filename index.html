@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Förderverein Kita Jakob-Laubach-Straße</title>
   <style>
     body {
@@ -13,7 +13,6 @@
       scroll-behavior: smooth;
     }
 
-    /* HEADER + NAV */
     header {
       background-image: url('Kita-Bild.webp');
       background-size: cover;
@@ -41,10 +40,10 @@
     }
 
     .menu-btn {
-      font-size: 1.2em;
-      background-color: rgba(0,0,0,0.6);
-      color: #fff;
-      border: none;
+      font-size: 1em;
+      background-color: #eee;
+      color: #333;
+      border: 1px solid #ccc;
       padding: 8px 12px;
       border-radius: 5px;
       cursor: pointer;
@@ -55,22 +54,22 @@
       position: absolute;
       top: 50px;
       left: 15px;
-      background-color: white;
+      background-color: #fff;
       border: 1px solid #ccc;
-      border-radius: 6px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     .menu-links a {
       display: block;
       padding: 10px;
       text-decoration: none;
-      color: #005288;
+      color: #333;
       border-bottom: 1px solid #eee;
     }
 
     .menu-links a:hover {
-      background-color: #f0f0f0;
+      background-color: #f5f5f5;
     }
 
     section {
@@ -90,14 +89,13 @@
     }
 
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 15px;
-      justify-content: center;
     }
 
     .gallery img {
-      width: 30%;
+      width: 100%;
       border-radius: 8px;
       cursor: pointer;
       transition: transform 0.3s;
@@ -159,11 +157,23 @@
       margin-top: 10px;
     }
 
-    @media (max-width: 768px) {
-      .gallery img {
-        width: 100%;
-      }
+    /* Scroll to top arrow */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      font-size: 1.5em;
+      background: #eee;
+      color: #333;
+      border: 1px solid #ccc;
+      padding: 8px 12px;
+      border-radius: 50%;
+      display: none;
+      cursor: pointer;
+      z-index: 1000;
+    }
 
+    @media (max-width: 768px) {
       header h1 {
         font-size: 1.5em;
         text-align: center;
@@ -175,9 +185,25 @@
       const links = document.getElementById('menuLinks');
       links.style.display = links.style.display === 'block' ? 'none' : 'block';
     }
+
+    // Show scroll-to-top button
+    window.onscroll = function() {
+      const btn = document.getElementById("scrollTopBtn");
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   </script>
 </head>
 <body>
+
+  <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
 
   <header>
     <nav>
