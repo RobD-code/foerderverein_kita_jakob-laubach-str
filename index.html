@@ -6,50 +6,125 @@
   <title>Förderverein Kita Jakob-Laubach-Straße</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
+      margin: 0;
       line-height: 1.6;
-      background-color: #f5f5f5;
+      background-color: #f9f9f9;
       color: #333;
     }
 
     header {
-      background-image: url('Kita-Bild.webp');
+      background-image: url('kita-bild.webp');
       background-size: cover;
       background-position: center;
       height: 300px;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
       color: white;
+      text-shadow: 1px 1px 5px #000;
     }
 
     header h1 {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      border-radius: 8px;
-    }
-
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      background-color: white;
+      font-size: 2.5em;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 10px 20px;
+      border-radius: 10px;
     }
 
     section {
-      margin-bottom: 60px;
-    }
-
-    hr {
-      margin: 40px 0;
-      border: none;
-      border-top: 2px solid #ddd;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     h2 {
       color: #005288;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid #ccc;
+      margin: 40px 0;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 30%;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+    }
+
+    .lightbox img {
+      display: block;
+      margin: auto;
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 10px;
+    }
+
+    .lightbox:target {
+      display: block;
+    }
+
+    .donation-box {
+      border: 2px solid #005288;
+      padding: 20px;
+      background-color: #f0f8ff;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .donation-box a {
+      color: #005288;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .email {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #005288;
+    }
+
+    .email a {
+      color: #005288;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .gallery img {
+        width: 100%;
+      }
+
+      header h1 {
+        font-size: 1.8em;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -59,84 +134,106 @@
     <h1>Förderverein Jakob-Laubach-Straße Mainz-Weisenau e.V.</h1>
   </header>
 
-  <main>
-
-    <hr>
-
-    <section>
-      <h2>Über uns</h2>
-      <p>
-        Der Förderverein Jakob-Laubach-Straße Mainz-Weisenau e.V. unterstützt die Kita Jakob-Laubach-Straße ideell und finanziell. <br><br>
-        Unser Ziel ist es, in enger Absprache mit Kita-Team und Eltern die pädagogische Arbeit der Kita zu stärken. Dabei ermöglichen wir Projekte, die über die reguläre Finanzierung hinausgehen und die Entwicklung der Kinder bereichern.
-      </p>
-    </section>
-
-    <hr>
-
-    <section>
-      <h2>Galerie</h2>
-      <p>Fotos</p>
-    </section>
-
-    <hr>
-
-    <section>
-      <h2>Unsere Projekte</h2>
-      <p>
-        In den letzten Jahren konnten wir unter anderem ein Klavier für die Kita finanzieren, ein Kita-Sommerfest ermöglichen und Bastelmaterial für kreative Nachmittage bereitstellen. Auch konnten wir mit Hilfe von Spenden die Kinder mit Auftritten des Galli-Theaters begeistern.
-      </p>
-      <p>
-        Aktuell sammeln wir für die Finanzierung eines wöchentlichen musikalischen Morgens, sodass das Klavier zum Leben erwacht :)<br>
-        Für die Finanzierung einer Ballschule, die Teamgeist und kognitive Fähigkeiten der Kinder erweitern wird.<br>
-        Außerdem versuchen wir, zweimal im Jahr das Galli Theater zu ermöglichen.<br><br>
-        Dafür sind wir auf weitere Mitglieder und Sponsoren / Partner angewiesen.
-      </p>
-    </section>
-
-    <hr>
-
-    <section>
-      <h2>Unsere Partner</h2>
-      <p>Schäfer Haus der Fliesen</p>
-    </section>
-
-    <hr>
-
-    <section>
-  <h2>Spenden</h2>
-  <p>
-    Auch ohne Mitgliedschaft können Sie den Förderverein mit einer Spende unterstützen. Ob einmalig oder regelmäßig – jede Spende fließt direkt in Projekte zugunsten der Kinder. Spendenquittungen stellen wir gerne aus.
-  </p>
-
-  <div style="border: 2px solid #005288; padding: 20px; background-color: #f0f8ff; border-radius: 8px; margin-top: 20px;">
-    <p style="font-size: 1.2em; margin: 0;"><strong>Empfänger:</strong><br> Foerderverein Kitatagesstaette Jakob-Laubach-Str e.V.</p>
-    <p style="font-size: 1.2em; margin: 10px 0;"><strong>IBAN:</strong><br> 
-      <a href="https://bankingurl.de/ueberweisung?iban=DE13550606110000300136&empfaenger=Foerderverein+Kita+Jakob-Laubach-Str+e.V." 
-         style="color: #005288; text-decoration: underline;" 
-         title="In Banking-App öffnen (wenn unterstützt)">
-         DE13 5506 0611 0000 3001 36
-      </a>
+  <section>
+    <h2>Über uns</h2>
+    <p>
+      Der Förderverein Jakob-Laubach-Straße Mainz-Weisenau e.V. unterstützt die Kita Jakob-Laubach-Straße ideell und finanziell.
+      Unser Ziel ist es, in enger Absprache mit Kita-Team und Eltern die pädagogische Arbeit der Kita zu stärken. Dabei ermöglichen wir Projekte,
+      die über die reguläre Finanzierung hinausgehen und die Entwicklung der Kinder bereichern.
     </p>
-    <p style="font-size: 1em; color: #666;">(Einfach IBAN kopieren oder in Ihrer Banking-App öffnen)</p>
-  </div>
-</section>
+  </section>
 
-    <hr>
+  <hr>
 
-    <section>
-  <h2>Kontakt & Mitmachen</h2>
-  <p>
-    Sie haben Fragen oder möchten sich aktiv einbringen? Wir freuen uns über jede Unterstützung – sei es durch Ideen, tatkräftige Hilfe bei Veranstaltungen oder organisatorisches Engagement.
-  </p>
-  <p style="font-size: 1.2em; font-weight: bold; color: #005288;">
-    📧 Kontaktieren Sie uns per E-Mail: <br>
-    <a href="mailto:foerderverein_kita_jakob-laubach-str@gmx.de" style="color: #005288; text-decoration: underline;">
-      foerderverein_kita_jakob-laubach-str@gmx.de
-    </a>
-  </p>
-</section>
+  <section>
+    <h2>Galerie</h2>
+    <div class="gallery">
+      <a href="#img1"><img src="Kita-Bild.webp" alt="Kita Bild 1"></a>
+      <a href="#img2"><img src="Kita-Bild2.jpeg" alt="Kita Bild 2"></a>
+      <a href="#img3"><img src="Kita-Bild3.jpeg" alt="Kita Bild 3"></a>
+    </div>
 
-  </main>
+    <div class="lightbox" id="img1">
+      <a href="#"><img src="Kita-Bild.webp" alt="Kita Bild 1 groß"></a>
+    </div>
+    <div class="lightbox" id="img2">
+      <a href="#"><img src="Kita-Bild2.jpeg" alt="Kita Bild 2 groß"></a>
+    </div>
+    <div class="lightbox" id="img3">
+      <a href="#"><img src="Kita-Bild3.jpeg" alt="Kita Bild 3 groß"></a>
+    </div>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Unsere Projekte</h2>
+    <p>
+      In den letzten Jahren konnten wir unter anderem ein Klavier für die Kita finanzieren, ein Kita-Sommerfest ermöglichen und Bastelmaterial für kreative Nachmittage bereitstellen.
+      Auch konnten wir mit Hilfe von Spenden die Kinder mit Auftritten des Galli-Theaters begeistern.
+    </p>
+    <p>
+      <strong>Aktuell sammeln wir für:</strong><br>
+      – die Finanzierung eines wöchentlichen musikalischen Morgens, sodass das Klavier zum Leben erwacht 🎹<br>
+      – die Einführung einer Ballschule ⚽, die Teamgeist und kognitive Fähigkeiten der Kinder fördert<br>
+      – zwei Galli-Theater-Auftritte pro Jahr 🎭
+    </p>
+    <p>
+      Dafür sind wir auf weitere Mitglieder und Sponsoren / Partner angewiesen.
+    </p>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Unsere Partner</h2>
+    <p>– Schäfer Haus der Fliesen<br>
+    – … (weitere folgen)</p>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Mitglied werden</h2>
+    <p>
+      Mit Ihrer Mitgliedschaft im Förderverein können Sie die Arbeit der Kita direkt unterstützen.
+      Der Mitgliedsbeitrag ist bewusst niedrig gehalten, damit alle mitmachen können. Jede Stimme zählt – und jede helfende Hand auch!
+    </p>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Spenden</h2>
+    <p>
+      Auch ohne Mitgliedschaft können Sie den Förderverein mit einer Spende unterstützen. Ob einmalig oder regelmäßig – jede Spende fließt direkt in Projekte zugunsten der Kinder.
+      Spendenquittungen stellen wir gerne aus.
+    </p>
+
+    <div class="donation-box">
+      <p><strong>Empfänger:</strong><br> Foerderverein Kitatagesstaette Jakob-Laubach-Str e.V.</p>
+      <p><strong>IBAN:</strong><br>
+        <a href="https://bankingurl.de/ueberweisung?iban=DE13550606110000300136&empfaenger=Foerderverein+Kita+Jakob-Laubach-Str+e.V.">
+          DE13 5506 0611 0000 3001 36
+        </a>
+      </p>
+      <p style="font-size: 0.9em; color: #555;">(Einfach IBAN kopieren oder in Ihrer Banking-App eingeben)</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Kontakt & Mitmachen</h2>
+    <p>
+      Sie haben Fragen oder möchten sich aktiv einbringen? Wir freuen uns über jede Unterstützung – sei es durch Ideen,
+      tatkräftige Hilfe bei Veranstaltungen oder organisatorisches Engagement.
+    </p>
+    <p class="email">
+      📧 Kontaktieren Sie uns per E-Mail:<br>
+      <a href="mailto:foerderverein_kita_jakob-laubach-str@gmx.de">foerderverein_kita_jakob-laubach-str@gmx.de</a>
+    </p>
+  </section>
 
 </body>
 </html>
