@@ -188,16 +188,12 @@
         text-align: center;
       }
     }
-    #partner {
+    .partner-logos {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
       align-items: center;
-    }
-    #partner a {
-      text-decoration: none;
-      display: inline-block;
     }
     .partner-logo {
       max-height: 100px;
@@ -205,6 +201,10 @@
       display: block;
       height: auto;
       width: auto;
+    }
+    #partner a {
+      text-decoration: none;
+      display: inline-block;
     }
   </style>
   <script>
@@ -303,12 +303,15 @@
   
 <section id="partner">
   <h2>Unsere Partner</h2>
-  <a href="https://haus-der-fliesen-mz.de" target="_blank">
+  
+  <div class="partner-logos">
+  <a href="https://haus-der-fliesen-mz.de" target="_blank">
     <img src="PartnerSchaefer.jpeg" alt="Partnerlogo Schäfer" class="partner-logo">
   </a>
   <a href="https://www.kids-planet-bodenheim.de/" target="_blank">
     <img src="PartnerKidsPlanet.jpg" alt="Partnerlogo Kids Planet" class="partner-logo">
   </a>
+  </div>
 </section>
 
 
