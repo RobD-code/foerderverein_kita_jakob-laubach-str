@@ -191,9 +191,20 @@
   </style>
   <script>
     function toggleMenu() {
-      const links = document.getElementById('menuLinks');
-      links.style.display = links.style.display === 'block' ? 'none' : 'block';
-    }
+    const links = document.getElementById('menuLinks');
+    const isVisible = links.style.display === 'block';
+    links.style.display = isVisible ? 'none' : 'block';
+  }
+
+  // Schließt das Menü, wenn außerhalb geklickt wird
+  document.addEventListener('click', function(event) {
+    const menu = document.getElementById('menuLinks');
+    const button = document.querySelector('.menu-btn');
+
+    if (!menu.contains(event.target) && !button.contains(event.target)) {
+      menu.style.display = 'none';
+    }
+
 
     // Show scroll-to-top button
     window.onscroll = function() {
